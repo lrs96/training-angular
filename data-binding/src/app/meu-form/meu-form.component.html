@@ -1,0 +1,25 @@
+<article class="container">
+    <h3>
+        Two-way data binding
+    </h3>
+
+    <div>
+        <input type="text" 
+        [value]="nome"
+        (input)="nome = nomeInput.value"
+        #nomeInput
+        >
+
+        <!-- precisar colocar o form modulo para trabalhar com o NG Model -->
+        <input type="text" [(ngModel)]="nome">
+
+        <p>Você digitou o nome: {{ nome }}</p>
+    </div>
+    <div>
+      Objetos
+      <p>Nome nome é: {{ pessoa.nome }} e tenho {{ pessoa.idade }}</p>
+      <input class="form-control" type="text" [(ngModel)]="pessoa.nome">
+      <input class="form-control" type="text" [(ngModel)]="pessoa.idade">
+    </div>
+
+</article>

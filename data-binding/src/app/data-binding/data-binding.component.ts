@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './data-binding.component.html',
   styleUrls: ['./data-binding.component.scss']
 })
+
 export class DataBindingComponent implements OnInit {
 
   url: string  = 'http://luan.training'
   cursoAngular: boolean = true;
   urlImagem: string = 'http://lorempixel.com/400/200/nature/';
+  valorAtual: string = '';
+  valorSalvo: string = '';
+  isMouseOver: boolean= false
+  
 
   getValor() {
     return 1
@@ -18,6 +23,24 @@ export class DataBindingComponent implements OnInit {
   getCurtircurso() {
     return true
   }
+
+  botaoclicado() {
+    alert("Botão clicado")
+  }
+
+  onKeyUp(evento: KeyboardEvent) {
+    this.valorAtual = (<HTMLInputElement>evento.target).value
+  }
+
+  salvarValor(valor: string) {
+    this.valorSalvo = valor
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver
+  }
+
+
 
   constructor() { }
 
