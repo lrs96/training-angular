@@ -1,3 +1,4 @@
+import { InputOutputPropertsComponent } from './input-output-properts/input-output-properts.component';
 import { MeuFormComponent } from './meu-form/meu-form.component';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,7 +12,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
   declarations: [
     AppComponent,
     DataBindingComponent,
-    MeuFormComponent
+    MeuFormComponent,
+    InputOutputPropertsComponent
   ],
   imports: [
     BrowserModule,
