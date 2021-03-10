@@ -7,13 +7,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
     MeuFormComponent,
-    InputOutputPropertsComponent
+    InputOutputPropertsComponent,
+    OutputPropertyComponent
   ],
   imports: [
     BrowserModule,
