@@ -47,8 +47,6 @@ export class DataBindingComponent implements OnInit {
     console.log(evento)
   }
 
-
-
   constructor() { }
 
   ngOnInit(): void {
