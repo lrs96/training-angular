@@ -25,22 +25,32 @@
            Selecione uma opção
            <select name="" id="" #classe (change)="0">
                <option value="alert-success">Sucesso</option>
-               <option value="alert-innfo">Info</option>
-               <option value="alert-waring">Alerta</option>
+               <option value="alert-info">Info</option>
+               <option value="alert-warning">Alerta</option>
                <option value="alert-danger">Erro</option>
            </select>
            <hr>
-          <div class="alert" role="alert">
+           
+           <div class="alert {{classe.value}}" role="alert">
+            texto colorido de acordo com o combobox
+           </div>
+
+          <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
             This is a success alert—check it out!
           </div>
-          <div class="alert" role="alert">
+          <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
             This is a danger alert—check it out!
           </div>
-          <div class="alert" role="alert">
+          <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
             This is a warning alert—check it out!
           </div>
-          <div class="alert" role="alert">
+          <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
             This is a info alert—check it out!
+          </div>
+
+          <!-- Só aparece se for selecionadoo danger -->
+          <div class="alert" role="alert" [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+            só aparece em caso de erro
           </div>
        </div>
     </article>
