@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ExemplosPipesComponent } from './exemplos-pipes/exemplos-pipes.component';
 import { CamelCasePipe } from './camel-case.pipe';
 import { SettingsService } from './settings.service';
+import { FiltroArrayPipe } from './filtro-array.pipe';
 
 registerLocaleData(ptBr)
 
@@ -15,7 +16,8 @@ registerLocaleData(ptBr)
   declarations: [
     AppComponent,
     ExemplosPipesComponent,
-    CamelCasePipe
+    CamelCasePipe,
+    FiltroArrayPipe
   ],
   imports: [
     BrowserModule
